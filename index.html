@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rise of the Dragons | November Launch</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cinzel Decorative', serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Cinzel Decorative', serif;
+    }
+
+    /* Dragon animations */
+    .dragon {
+      position: absolute;
+      top: 20%;
+      width: 120px;
+      opacity: 0.6;
+      filter: drop-shadow(0 0 3px silver);
+      animation: fly 25s linear infinite;
+    }
+
+    .dragon2 {
+      top: 40%;
+      width: 90px;
+      opacity: 0.4;
+      animation-duration: 35s;
+      /* animation-delay: 10s; */
+    }
+
+    @keyframes fly {
+      0% {
+        left: -150px;
+        transform: scaleX(1) rotate(5deg);
+      }
+
+      50% {
+        transform: scaleX(1.1) rotate(-5deg);
+      }
+
+      100% {
+        left: 110%;
+        transform: scaleX(1) rotate(5deg);
+      }
+    }
+
+    /* Rune Circle Effect */
+    .rune-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      border: 2px solid silver;
+      box-shadow: 0 0 25px silver, 0 0 50px rgba(192, 192, 192, 0.5);
+      animation: pulse 6s infinite ease-in-out;
+      z-index: 1;
+      background: radial-gradient(transparent 70%, rgba(192, 192, 192, 0.05) 100%);
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.4;
+      }
+    }
+
+    /* Ornamental underline */
+    .ornament {
+      position: relative;
+      display: inline-block;
+    }
+
+    .ornament::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 80%;
+      margin: 6px auto 0;
+      background: linear-gradient(to right, silver, transparent, silver);
+    }
+
+    /* Glowing button */
+    .btn-medallion {
+      background: linear-gradient(to right, #6b8e23, #013220);
+      border: 1px solid silver;
+      border-radius: 9999px;
+      padding: 0.75rem 2rem;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 0 15px silver, inset 0 0 8px rgba(255, 255, 255, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-medallion:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px silver, inset 0 0 12px rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-green-950 to-green-900 text-gray-200">
+
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+    <!-- Background forest texture -->
+    <div
+      class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1631378423151-13a6914f9fae?w=1600&fit=crop&crop=faces')] bg-cover bg-center opacity-30">
+    </div>
+
+    <!-- Animated Dragons -->
+    <img src="/Dragon_silhouette.png" class="dragon" alt="Flying dragon" />
+    <img src="/Dragon_silhouette.png" class="dragon dragon2" alt="Flying dragon" />
+
+    <!-- Rune Circle -->
+    <div class="rune-circle"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-3xl px-6">
+      <h1 class="text-5xl md:text-7xl font-bold text-silver-200 drop-shadow-lg">Alianza Perdida</h1>
+      <p class="mt-6 text-xl text-gray-300">A medieval fantasy tale of fire, blood, and destiny. Launching this
+        November.</p>
+      <a href="#preorder" class="mt-8 inline-block btn-medallion">Pre-Order Now</a>
+    </div>
+  </section>
+
+  <!-- About the Book -->
+  <section id="about" class="py-20 px-6 bg-green-900/80">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-silver-300 ornament">About the Book</h2>
+      <p class="mt-6 text-lg text-gray-200 leading-relaxed">
+        In the age of kings and crusades, dragons ruled the skies and kingdoms fell under their fire.
+        <em>Rise of the Dragons</em> is a gripping tale of knights, betrayal, and ancient magic, where
+        one warrior must decide whether to fight for his crown or for the survival of the last dragon.
+      </p>
+    </div>
+  </section>
+  <!-- Author Bio -->
+  <section class="py-20 px-6 bg-gradient-to-b from-green-800 to-green-700">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-silver-300/50 shadow-lg">
+        <img src="https://asmodeusediciones.com/wp-content/uploads/2025/07/Osli.png" alt="Author" class="w-full h-full object-cover">
+      </div>
+      <div class="flex-1">
+        <h2 class="text-4xl font-bold text-silver-300 ornament">About the Author</h2>
+        <p class="mt-6 text-lg text-gray-200 leading-relaxed">
+          Seraphina Blackthorn is an award-winning fantasy author known for her vivid world-building and complex
+          characters.
+          With a background in medieval history, she brings authenticity to her tales of dragons and knights.
+          When not writing, she can be found studying ancient manuscripts or hiking in the Scottish Highlands.
+        </p>
+        <div class="mt-6 flex gap-4">
+          <a href="#" class="text-silver-300 hover:text-white transition">
+            <i data-feather="twitter"></i>
+          </a>
+          <a href="#" class="text-silver-300 hover:text-white transition">
+            <i data-feather="instagram"></i>
+          </a>
+          <a href="#" class="text-silver-300 hover:text-white transition">
+            <i data-feather="book-open"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Highlights -->
+  <section class="py-20 px-6 bg-gradient-to-b from-green-950 to-green-800">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+      <div class="p-6 bg-green-900/50 rounded-xl shadow-lg border border-silver-400/20">
+        <h3 class="text-2xl font-bold text-silver-200">Medieval Intrigue</h3>
+        <p class="mt-4 text-gray-300">A kingdom on the brink of war, knights torn between honor and survival.</p>
+      </div>
+      <div class="p-6 bg-green-900/50 rounded-xl shadow-lg border border-silver-400/20">
+        <h3 class="text-2xl font-bold text-silver-200">Ancient Magic</h3>
+        <p class="mt-4 text-gray-300">Forgotten spells, dragonfire, and a prophecy that could change history.</p>
+      </div>
+      <div class="p-6 bg-green-900/50 rounded-xl shadow-lg border border-silver-400/20">
+        <h3 class="text-2xl font-bold text-silver-200">Epic Battles</h3>
+        <p class="mt-4 text-gray-300">Warriors clash beneath the shadow of wings, as destiny awakens.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Sinopsis -->
+    <section id="sinopsis" class="py-20 px-6 bg-green-950/90 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-5xl font-bold text-silver-300 ornament mb-10">Sinopsis</h2>
+        <p class="text-lg text-gray-200 leading-relaxed mb-6">
+          Un matrimonio arreglado entre dos enemigos,<br>
+          y un equipo negado a aceptarlo, podrían ser la<br>
+          única esperanza de devolver la tierra de los<br>
+          terramaes a la superficie.
+        </p>
+        <p class="text-lg text-gray-200 leading-relaxed mb-6">
+          Olive Ward, nacida en Ciudad Veyra, debe cambiar su hogar y su libertad para cumplir con el pacto impuesto por su
+          padre: casarse con el capitán del equipo Aureum y así salvar a todo el continente.
+          Integrarse a un nuevo equipo y demostrar de qué está hecha no será fácil… y ganarse su confianza, aún menos.
+        </p>
+        <p class="text-lg text-gray-200 leading-relaxed mb-6">
+          Levi Hunter, capitán de equipo Aureum, solo quiere dejar atrás una pérdida que lo marcó. Pero cuando se ve
+          atrapado en un compromiso que no eligió, y con una chica que no piensa rendirse ante él, su mundo comienza a
+          resquebrajarse.
+        </p>
+        <p class="text-lg text-gray-200 leading-relaxed mb-6 italic">
+          Ni el equipo la acepta. Ni ellos se soportan.
+        </p>
+        <p class="text-lg text-gray-200 leading-relaxed">
+          Mientras viejas heridas y fuerzas ocultas amenazan a la magia, Olive y Levi deberán decidir si cumplirán con lo
+          que espera de ellos… o si el destino les tiene preparada una unión mucho más profunda.
+        </p>
+    
+        <!-- Decorative footer (like in your image with the ravens/dragons) -->
+        <div class="mt-12 flex items-center justify-center gap-4 text-silver-400">
+          <span class="text-2xl">🐉</span>
+          <span class="text-xl">Bilogía Secran I</span>
+          <span class="text-2xl">🐉</span>
+        </div>
+      </div>
+    </section>
+
+  <!-- Pre-order CTA -->
+  <script>
+    feather.replace()
+  </script>
+  <section id="preorder" class="py-20 px-6 bg-green-900 relative">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-silver-300 ornament">Reserve Your Copy</h2>
+      <p class="mt-6 text-lg text-gray-300">Be among the first to enter the world of dragons this November.</p>
+      <form class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
+        <input type="email" placeholder="Enter your email" class="px-4 py-3 rounded-lg w-full md:w-2/3 text-gray-900" />
+        <button class="btn-medallion">Notify Me</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-gray-400 bg-green-950">
+    <p>© 2025 Alianza Perdida. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
