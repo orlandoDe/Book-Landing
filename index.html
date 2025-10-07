@@ -66,15 +66,35 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 420px;
-      height: 420px;
+      width: 550px;
+      height: 550px;
+      max-width: 90vw;
+      max-height: 90vw;
       border-radius: 50%;
-      border: 2px solid silver;
-      box-shadow: 0 0 25px silver, 0 0 50px rgba(192, 192, 192, 0.5);
+      border: 1px solid rgba(100, 116, 139, 0.3);
+
+      /* Efecto glassmorphism */
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background: rgba(30, 41, 59, 0.15);
+
+      /* Sombras externas e internas */
+      box-shadow:
+        0 0 25px silver,
+        0 0 50px rgba(192, 192, 192, 0.3),
+        0px 12px 40px 0 rgba(2, 6, 23, 0.3),
+        inset 0 0 120px rgba(79, 70, 229, 0.08),
+        inset 0 0 4px 2px rgba(255, 255, 255, 0.1);
+
       animation: pulse 6s infinite ease-in-out;
       z-index: 1;
-      background: radial-gradient(transparent 70%, rgba(192, 192, 192, 0.05) 100%);
+      background-image: radial-gradient(
+        transparent 70%,
+        rgba(192, 192, 192, 0.05) 100%
+      );
     }
+
+
 
     @keyframes pulse {
 
@@ -167,8 +187,8 @@
           class="mx-auto w-[350px] md:w-[500px] drop-shadow-[0_0_15px_silver]" />
       </div>
 
-      <p style="margin-top: -17%;" class="text-xl text-gray-300">
-        Una historia llena de magia, dragones, romance y muchos secretos por descubrir
+      <p style="margin-top: -20%; max-width: 550px;" class="text-xl text-gray-300">
+        Una historia llena de magia, dragones, romance y muchos secretos por descubrir.
       </p>
       <a href="#preorder" class="mt-8 inline-block btn-medallion">PRE ORDENA YA</a>
     </div>
@@ -177,8 +197,8 @@
   <!-- About the Book -->
   <section id="about" class="py-20 px-6 bg-green-900/80">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-silver-300 ornament">Acerca del libro</h2>
-      <p class="mt-6 text-lg text-gray-200 leading-relaxed">
+      <h2 class="text-4xl font-bold text-silver-300 ornament">ACERCA DEL LIBRO</h2>
+      <p class="mt-6 text-lg text-gray-200 leading-relaxed text-justify">
         En un continente donde la magia se ve amenazada, un matrimonio arreglado entre enemigos podría ser la última chispa de
         esperanza. Olive Ward, obligada a dejar atrás su libertad, y Levi Hunter, un capitán marcado por la pérdida, deberán
         decidir si la alianza que les impusieron puede salvar a los terramaes… o condenarlos a todos.
@@ -192,8 +212,9 @@
         <img src="/img/IMG_4306.JPG" alt="Author" class="w-full h-full object-cover">
       </div>
       <div class="flex-1">
-        <h2 class="text-4xl font-bold text-silver-300 ornament">Sobre La Autora</h2>
-        <p class="mt-6 text-lg text-gray-200 leading-relaxed">
+        <h2 class="text-4xl font-bold text-silver-300 ornament uppercase text-center md:text-left">SOBRE LA AUTORA</h2>
+
+        <p class="mt-6 text-lg text-gray-200 leading-relaxed text-justify">
           Osli es una autora, lectora empedernida desde niña y amante de la música. Su amor por las historias la llevó a convertir
           la imaginación en vocación, y a transformar emociones en tinta.
         </p>
@@ -222,14 +243,16 @@
       </div>
   
       <!-- Book Description -->
-      <div class="w-full md:w-1/2 text-center md:text-left">
-        <h2 class="text-4xl font-bold text-silver-300 ornament">Alianza Perdida</h2>
-        <p class="mt-6 text-lg text-gray-300 leading-relaxed">
-          Descubre la obra que inicia la <strong>Bilogía Secran</strong>.
-          Magia, intrigas y un destino marcado por la unión de enemigos
+      <div class="w-full md:w-1/2 flex flex-col items-center text-center">
+        <h2 class="text-4xl font-bold text-silver-300 ornament uppercase mb-6">
+          ALIANZA PERDIDA
+        </h2>
+        <p class="mt-0 text-lg text-gray-300 leading-relaxed text-justify max-w-md">
+          Descubre la obra que inicia la <strong>Bilogía Secran</strong>. Magia, intrigas y un destino marcado por la unión de
+          enemigos
           que podría salvarlo todo… o condenar la tierra para siempre.
         </p>
-        <a href="#preorder" class="mt-8 inline-block btn-medallion">Preordena Ya</a>
+        <a href="#preorder" class="mt-8 inline-block btn-medallion uppercase mx-auto">PREORDENA YA</a>
       </div>
   
     </div>
@@ -253,48 +276,54 @@
     </div>
   </section>
   <!-- Sinopsis -->
-    <section id="sinopsis" class="py-20 px-6 bg-green-950/90 text-center">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-5xl font-bold text-silver-300 ornament mb-10">Sinopsis</h2>
-        <p class="text-lg text-gray-200 leading-relaxed mb-6">
-          Un matrimonio arreglado entre dos enemigos,<br>
-          y un equipo negado a aceptarlo, podrían ser la<br>
-          única esperanza de devolver la tierra de los<br>
-          terramaes a la superficie.
+  <section id="sinopsis" class="py-20 px-6 bg-green-950/90 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-5xl font-bold text-silver-300 ornament mb-10 uppercase">Sinopsis</h2>
+
+      <div class="text-gray-200 text-lg leading-relaxed text-justify mx-auto max-w-prose px-4 md:px-0">
+        <p class="mb-6">
+          Un matrimonio arreglado entre dos enemigos, y un equipo negado a aceptarlo, podrían ser la única esperanza de
+          devolver la tierra de los terramaes a la superficie.
         </p>
-        <p class="text-lg text-gray-200 leading-relaxed mb-6">
-          Olive Ward, nacida en Ciudad Veyra, debe cambiar su hogar y su libertad para cumplir con el pacto impuesto por su
-          padre: casarse con el capitán del equipo Aureum y así salvar a todo el continente.
-          Integrarse a un nuevo equipo y demostrar de qué está hecha no será fácil… y ganarse su confianza, aún menos.
+
+        <p class="mb-6">
+          Olive Ward, nacida en Ciudad Veyra, debe cambiar su hogar y su libertad para cumplir con el pacto impuesto por
+          su padre: casarse con el capitán del equipo Aureum y así salvar a todo el continente. Integrarse a un nuevo
+          equipo y demostrar de qué está hecha no será fácil… y ganarse su confianza, aún menos.
         </p>
-        <p class="text-lg text-gray-200 leading-relaxed mb-6">
+
+        <p class="mb-6">
           Levi Hunter, capitán de equipo Aureum, solo quiere dejar atrás una pérdida que lo marcó. Pero cuando se ve
           atrapado en un compromiso que no eligió, y con una chica que no piensa rendirse ante él, su mundo comienza a
           resquebrajarse.
         </p>
-        <p class="text-lg text-gray-200 leading-relaxed mb-6 italic">
+
+        <p class="italic text-center md:text-justify mb-6">
           Ni el equipo la acepta. Ni ellos se soportan.
         </p>
-        <p class="text-lg text-gray-200 leading-relaxed">
+
+        <p>
           Mientras viejas heridas y fuerzas ocultas amenazan a la magia, Olive y Levi deberán decidir si cumplirán con lo
-          que espera de ellos… o si el destino les tiene preparada una unión mucho más profunda.
+          que se espera de ellos… o si el destino les tiene preparada una unión mucho más profunda.
         </p>
-    
-        <!-- Decorative footer (like in your image with the ravens/dragons) -->
-        <div class="mt-12 flex items-center justify-center gap-4 text-silver-400">
-          <span class="text-2xl">🐉</span>
-          <span class="text-xl">Bilogía Secran I</span>
-          <span class="text-2xl">🐉</span>
-        </div>
       </div>
-    </section>
+
+      <!-- Decorative footer -->
+      <div class="mt-12 flex items-center justify-center gap-4 text-silver-400">
+        <span class="text-2xl">🐉</span>
+        <span class="text-xl">Bilogía Secran I</span>
+        <span class="text-2xl">🐉</span>
+      </div>
+    </div>
+  </section>
+
 
     <!-- Conoce los detalles de la historia -->
-    <section id="detalles" class="py-20 px-6 bg-green-950 text-center">
+    <section id="detalles" class="py-20 px-6 bg-gradient-to-b from-green-900 via-green-800 to-green-700 text-center">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-4xl font-bold text-silver-300 ornament">Conoce los detalles de la historia</h2>
         <p class="mt-4 text-gray-300 text-lg">Explora el mundo de los Terramaes, sus poderes y secretos.</p>
-    
+        <br>
         <!-- Terramaes / Poderes -->
           <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl font-bold text-silver-300 ornament mb-12">Terramaes</h2>
@@ -302,8 +331,8 @@
             <div class="grid grid-cols-1 gap-10 md:gap-6">
           
               <!-- MORVAK -->
-              <div class="flex items-center justify-evenly bg-green-900/40 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon_Map.png" alt="Dragón" class="w-[90px] h-[90px]">
+              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
                 <div>
                   <h3 class="text-2xl text-silver-200 font-bold">MORVAK</h3>
                   <p class="text-gray-300 italic">(Oso)</p>
@@ -313,8 +342,8 @@
               </div>
           
               <!-- IGNIR -->
-              <div class="flex items-center justify-evenly bg-green-900/40 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon_Map.png" alt="Dragón" class="w-[90px] h-[90px]">
+              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
                 <div>
                   <h3 class="text-2xl text-silver-200 font-bold">IGNIR</h3>
                   <p class="text-gray-300 italic">(León)</p>
@@ -324,8 +353,8 @@
               </div>
           
               <!-- SYLPHAR -->
-              <div class="flex items-center justify-evenly bg-green-900/40 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon_Map.png" alt="Dragón" class="w-[90px] h-[90px]">
+              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
                 <div>
                   <h3 class="text-2xl text-silver-200 font-bold">SYLPHAR</h3>
                   <p class="text-gray-300 italic">(Águila)</p>
@@ -335,8 +364,8 @@
               </div>
           
               <!-- FEROX -->
-              <div class="flex items-center justify-evenly bg-green-900/40 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon_Map.png" alt="Dragón" class="w-[90px] h-[90px]">
+              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
                 <div>
                   <h3 class="text-2xl text-silver-200 font-bold">FEROX</h3>
                   <p class="text-gray-300 italic">(Lobo)</p>
@@ -346,8 +375,8 @@
               </div>
           
               <!-- NYMARA -->
-              <div class="flex items-center justify-evenly bg-green-900/40 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon_Map.png" alt="Dragón" class="w-[90px] h-[90px]">
+              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
                 <div>
                   <h3 class="text-2xl text-silver-200 font-bold">NYMARA</h3>
                   <p class="text-gray-300 italic">(Pantera)</p>
