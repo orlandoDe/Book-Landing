@@ -11,6 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet">
+  <script src="./main.js" type="module"></script>
   <style>
     body {
       font-family: 'Cinzel Decorative', serif;
@@ -161,6 +162,29 @@
       font-weight: normal;
       font-style: normal;
     }
+        /* Start hidden */
+    #model {
+      width: 100%;
+      height: 100vh;
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.164);
+      backdrop-filter: blur(10px) brightness(1.2);
+    }
+  
+    /* Optional close button */
+    #close3D {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      z-index: 11;
+    }
   </style>
 </head>
 
@@ -237,7 +261,7 @@
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
   
       <!-- Book Image -->
-      <div class="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+      <div class="flex-shrink-0 w-full md:w-1/2 flex justify-center" id="book">
         <img src="/img/IMG_5048.JPEG" alt="Alianza Perdida Book Cover"
           class="rounded-lg shadow-[0_0_25px_silver] w-80 md:w-[350px]">
       </div>
@@ -436,7 +460,7 @@
 
   <!-- Pre-order CTA -->
   <script>
-    feather.replace()
+    //feather.replace()
   </script>
   <section id="preorder" class="py-20 px-6 bg-green-900 relative">
     <div class="max-w-3xl mx-auto text-center">
@@ -453,6 +477,9 @@
   <footer class="py-8 text-center text-gray-400 bg-green-950">
     <p>© 2025 Alianza Perdida. All rights reserved.</p>
   </footer>
+  <div id="model">
+    <div id="close3D">✕</div>
+  </div>
 </body>
 
 </html>
