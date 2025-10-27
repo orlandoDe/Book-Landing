@@ -466,10 +466,13 @@
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-4xl font-bold text-silver-300 ornament">Reserva tu copia</h2>
       <p class="mt-6 text-lg text-gray-300">Sé el primero en entrar a este mágico mundo.</p>
-      <form class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
-        <input type="email" placeholder="Email" class="px-4 py-3 rounded-lg w-full md:w-2/3 text-gray-900" />
-        <button class="btn-medallion">Avísame</button>
+      <form id="subscribeForm" class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
+        <input type="email" id="emailInput" placeholder="Email" required
+          class="px-4 py-3 rounded-lg w-full md:w-2/3 text-gray-900" />
+        <button type="submit" class="btn-medallion">Avísame</button>
       </form>
+      
+      <p id="formMessage" class="mt-4 text-gray-200 text-lg"></p>
     </div>
   </section>
 
@@ -480,6 +483,44 @@
   <div id="model">
     <div id="close3D">✕</div>
   </div>
+
+  <script>
+    document.getElementById("subscribeForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("emailInput").value.trim();
+      const message = document.getElementById("formMessage");
+
+      if (!email) {
+        message.textContent = "Por favor ingresa un correo válido.";
+        return;
+      }
+
+      message.textContent = "Enviando...";
+
+      try {
+        const res = await fetch("https://oslimarquez.linuseast1wp.hustly.live/wp-json/suscripciones/v1/guardar", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        });
+
+        const data = await res.json();
+
+        if (data.status === "ok") {
+          message.textContent = "✅ ¡Suscripción exitosa!";
+          document.getElementById("emailInput").value = "";
+        } else if (data.status === "exists") {
+          message.textContent = "⚠️ Este correo ya está suscrito.";
+        } else {
+          message.textContent = "❌ Hubo un error, inténtalo de nuevo.";
+        }
+      } catch (err) {
+        console.error(err);
+        message.textContent = "❌ Error de conexión.";
+      }
+    });
+  </script>
+
 </body>
 
 </html>
