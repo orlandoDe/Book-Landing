@@ -5,6 +5,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alianza Perdida | Lanzamiento</title>
+  <meta name="description"
+    content="Descubre Alianza Perdida, el inicio de la Bilogía Secran. Una historia de fantasía, dragones, romance y secretos por descubrir de la autora Osli Marquez.">
+  <meta name="keywords"
+    content="Alianza Perdida, Bilogía Secran, Osli Marquez, Fantasía, Dragones, Romance, Libros, Terramaes">
+  <meta name="author" content="Osli Marquez">
+  <link rel="canonical" href="https://alianzaperdida.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alianzaperdida.com/">
+  <meta property="og:title" content="Alianza Perdida | Lanzamiento">
+  <meta property="og:description"
+    content="Descubre Alianza Perdida, el inicio de la Bilogía Secran. Una historia de fantasía, dragones, romance y secretos por descubrir.">
+  <meta property="og:image" content="https://alianzaperdida.com/img/IMG_5048(1).png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://alianzaperdida.com/">
+  <meta property="twitter:title" content="Alianza Perdida | Lanzamiento">
+  <meta property="twitter:description"
+    content="Descubre Alianza Perdida, el inicio de la Bilogía Secran. Una historia de fantasía, dragones, romance y secretos por descubrir.">
+  <meta property="twitter:image" content="https://alianzaperdida.com/img/IMG_5048(1).png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,15 +39,19 @@
       font-family: 'Cinzel Decorative', serif;
     }
 
-  h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: 'Cormorant Garamond', serif;
-      text-transform: none; /* para quitar versalitas */
+      text-transform: none;
+      /* para quitar versalitas */
     }
 
-  p, .synopsis {
-    font-family: 'Playfair Display', serif;
-    text-transform: none;
-  }
+    p,
+    .synopsis {
+      font-family: 'Playfair Display', serif;
+      text-transform: none;
+    }
 
     /* Dragon animations */
     .dragon {
@@ -89,10 +115,8 @@
 
       animation: pulse 6s infinite ease-in-out;
       z-index: 1;
-      background-image: radial-gradient(
-        transparent 70%,
-        rgba(192, 192, 192, 0.05) 100%
-      );
+      background-image: radial-gradient(transparent 70%,
+          rgba(192, 192, 192, 0.05) 100%);
     }
 
 
@@ -117,6 +141,7 @@
       font-family: 'Lavish', 'Nord Poem', cursive;
       letter-spacing: 0.05em;
     }
+
     .ornament {
       position: relative;
       display: inline-block;
@@ -151,18 +176,21 @@
     /* Ornamentales locales */
     @font-face {
       font-family: 'Lavish';
-      src: url('/fonts/Lavish.ttf') format('truetype'); /* cambia el path según tu repo */
+      src: url('/fonts/Lavish.ttf') format('truetype');
+      /* cambia el path según tu repo */
       font-weight: normal;
       font-style: normal;
     }
 
     @font-face {
       font-family: 'Nord Poem';
-      src: url('/fonts/NordPoem.ttf') format('truetype'); /* cambia el path */
+      src: url('/fonts/NordPoem.ttf') format('truetype');
+      /* cambia el path */
       font-weight: normal;
       font-style: normal;
     }
-        /* Start hidden */
+
+    /* Start hidden */
     #model {
       width: 100%;
       height: 100vh;
@@ -174,7 +202,7 @@
       background: rgba(0, 0, 0, 0.164);
       backdrop-filter: blur(10px) brightness(1.2);
     }
-  
+
     /* Optional close button */
     #close3D {
       position: absolute;
@@ -198,8 +226,8 @@
     </div>
 
     <!-- Animated Dragons -->
-    <img src="/img/Dragon_silhouette.png" class="dragon" alt="Flying dragon" />
-    <img src="/img/Dragon_silhouette.png" class="dragon dragon2" alt="Flying dragon" />
+    <img src="/img/Dragon_silhouette.png" class="dragon" alt="" aria-hidden="true" />
+    <img src="/img/Dragon_silhouette.png" class="dragon dragon2" alt="" aria-hidden="true" />
 
     <!-- Rune Circle -->
     <div class="rune-circle"></div>
@@ -207,7 +235,8 @@
     <!-- Hero Content -->
     <div class="relative z-10 max-w-3xl px-6">
       <div class="flex justify-center" style="margin-top: 50px;">
-        <img src="/img/Letras_Efecto.png" alt="Alianza Perdida"
+        <h1 class="sr-only">Alianza Perdida</h1>
+        <img src="/img/Letras_Efecto(1).png" alt="Alianza Perdida"
           class="mx-auto w-[350px] md:w-[500px] drop-shadow-[0_0_15px_silver]" />
       </div>
 
@@ -223,8 +252,10 @@
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-4xl font-bold text-silver-300 ornament">ACERCA DEL LIBRO</h2>
       <p class="mt-6 text-lg text-gray-200 leading-relaxed text-justify">
-        En un continente donde la magia se ve amenazada, un matrimonio arreglado entre enemigos podría ser la última chispa de
-        esperanza. Olive Ward, obligada a dejar atrás su libertad, y Levi Hunter, un capitán marcado por la pérdida, deberán
+        En un continente donde la magia se ve amenazada, un matrimonio arreglado entre enemigos podría ser la última
+        chispa de
+        esperanza. Olive Ward, obligada a dejar atrás su libertad, y Levi Hunter, un capitán marcado por la pérdida,
+        deberán
         decidir si la alianza que les impusieron puede salvar a los terramaes… o condenarlos a todos.
       </p>
     </div>
@@ -233,13 +264,14 @@
   <section class="py-20 px-6 bg-gradient-to-b from-green-800 to-green-700">
     <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
       <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-silver-300/50 shadow-lg">
-        <img src="/img/IMG_4306.JPG" alt="Author" class="w-full h-full object-cover">
+        <img src="/img/IMG_4306(1).jpg" alt="Foto de la autora Osli Marquez" class="w-full h-full object-cover">
       </div>
       <div class="flex-1">
         <h2 class="text-4xl font-bold text-silver-300 ornament uppercase text-center md:text-left">SOBRE LA AUTORA</h2>
 
         <p class="mt-6 text-lg text-gray-200 leading-relaxed text-justify">
-          Osli es una autora, lectora empedernida desde niña y amante de la música. Su amor por las historias la llevó a convertir
+          Osli es una autora, lectora empedernida desde niña y amante de la música. Su amor por las historias la llevó a
+          convertir
           la imaginación en vocación, y a transformar emociones en tinta.
         </p>
         <div class="mt-6 flex gap-4">
@@ -259,26 +291,28 @@
   <!-- Book Cover Section -->
   <section id="book-cover" class="py-20 px-6 bg-green-950">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
-  
+
       <!-- Book Image -->
       <div class="flex-shrink-0 w-full md:w-1/2 flex justify-center" id="book">
-        <img src="/img/IMG_5048.JPEG" alt="Alianza Perdida Book Cover"
+        <img src="/img/IMG_5048(1).png" alt="Portada del libro Alianza Perdida"
           class="rounded-lg shadow-[0_0_25px_silver] w-80 md:w-[350px]">
       </div>
-  
+
       <!-- Book Description -->
       <div class="w-full md:w-1/2 flex flex-col items-center text-center">
         <h2 class="text-4xl font-bold text-silver-300 ornament uppercase mb-6">
           ALIANZA PERDIDA
         </h2>
         <p class="mt-0 text-lg text-gray-300 leading-relaxed text-center max-w-md">
-          Descubre la obra que inicia la <strong>Bilogía Secran</strong>. Magia, intrigas y un destino marcado por la unión de
+          Descubre la obra que inicia la <strong>Bilogía Secran</strong>. Magia, intrigas y un destino marcado por la
+          unión de
           enemigos
           que podría salvarlo todo… o condenar la tierra para siempre.
         </p>
-        <a href="https://asmodeusediciones.com/shop" class="mt-8 inline-block btn-medallion uppercase mx-auto">COMPRAR</a>
+        <a href="https://asmodeusediciones.com/shop"
+          class="mt-8 inline-block btn-medallion uppercase mx-auto">COMPRAR</a>
       </div>
-  
+
     </div>
   </section>
 
@@ -327,7 +361,8 @@
         </p>
 
         <p>
-          Mientras viejas heridas y fuerzas ocultas amenazan a la magia, Olive y Levi deberán decidir si cumplirán con lo
+          Mientras viejas heridas y fuerzas ocultas amenazan a la magia, Olive y Levi deberán decidir si cumplirán con
+          lo
           que se espera de ellos… o si el destino les tiene preparada una unión mucho más profunda.
         </p>
       </div>
@@ -342,155 +377,171 @@
   </section>
 
 
-    <!-- Conoce los detalles de la historia -->
-    <section id="detalles" class="py-20 px-6 bg-gradient-to-b from-green-900 via-green-800 to-green-700 text-center">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold text-silver-300 ornament">Conoce los detalles de la historia</h2>
-        <p class="mt-4 text-gray-300 text-lg">Explora el mundo de los Terramaes, sus poderes y secretos.</p>
-        <br>
-        <!-- Terramaes / Poderes -->
-          <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold text-silver-300 ornament mb-12">Terramaes</h2>
-          
-            <div class="grid grid-cols-1 gap-10 md:gap-6">
-          
-              <!-- MORVAK -->
-              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
-                <div>
-                  <h3 class="text-2xl text-silver-200 font-bold">MORVAK</h3>
-                  <p class="text-gray-300 italic">(Oso)</p>
-                  <img src="/img/foliage.png" alt="ornamento" class="mx-auto -mb-4 mt-0 w-20 opacity-99">
-                </div>
-                <img src="/img/Oso.png" alt="Oso" class="w-14 md:w-20">
-              </div>
-          
-              <!-- IGNIR -->
-              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
-                <div>
-                  <h3 class="text-2xl text-silver-200 font-bold">IGNIR</h3>
-                  <p class="text-gray-300 italic">(León)</p>
-                  <img src="/img/foliage.png" alt="ornamento" class="mx-auto -mb-4 mt-0 w-20 opacity-99">
-                </div>
-                <img src="/img/Leon.png" alt="León" class="w-14 md:w-20">
-              </div>
-          
-              <!-- SYLPHAR -->
-              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
-                <div>
-                  <h3 class="text-2xl text-silver-200 font-bold">SYLPHAR</h3>
-                  <p class="text-gray-300 italic">(Águila)</p>
-                  <img src="/img/foliage.png" alt="ornamento" class="mx-auto -mb-4 mt-0 w-20 opacity-99">
-                </div>
-                <img src="/img/Aguila.png" alt="Águila" class="w-14 md:w-20">
-              </div>
-          
-              <!-- FEROX -->
-              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
-                <div>
-                  <h3 class="text-2xl text-silver-200 font-bold">FEROX</h3>
-                  <p class="text-gray-300 italic">(Lobo)</p>
-                  <img src="/img/foliage.png" alt="ornamento" class="mx-auto -mb-4 mt-0 w-20 opacity-99">
-                </div>
-                <img src="/img/Lobo.png" alt="Lobo" class="w-14 md:w-20">
-              </div>
-          
-              <!-- NYMARA -->
-              <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
-                <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
-                <div>
-                  <h3 class="text-2xl text-silver-200 font-bold">NYMARA</h3>
-                  <p class="text-gray-300 italic">(Pantera)</p>
-                  <img src="/img/foliage.png" alt="ornamento" class="mx-auto -mb-4 mt-0 w-20 opacity-99">
-                </div>
-                <img src="/img/Pantera.png" alt="Pantera" class="w-14 md:w-20">
-              </div>
+  <!-- Conoce los detalles de la historia -->
+  <section id="detalles" class="py-20 px-6 bg-gradient-to-b from-green-900 via-green-800 to-green-700 text-center">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl font-bold text-silver-300 ornament">Conoce los detalles de la historia</h2>
+      <p class="mt-4 text-gray-300 text-lg">Explora el mundo de los Terramaes, sus poderes y secretos.</p>
+      <br>
+      <!-- Terramaes / Poderes -->
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-silver-300 ornament mb-12">Terramaes</h2>
 
-              <!-- Poderes -->
-              <div class="mt-16">
-                <h3 class="text-3xl font-bold text-silver-300 ornament mb-8">PODERES</h3>
-              
-                <div
-                  class="relative bg-green-950/90 border border-silver-400/40 rounded-lg shadow-[0_0_25px_rgba(192,192,192,0.3)] p-8 max-w-3xl mx-auto text-center overflow-hidden">
-              
-                  <!-- Ornamentos en las esquinas -->
-                  <img src="/img/ornament-corner.png" alt="ornamento" class="absolute top-0 left-0 w-32 opacity-70">
-                  <img src="/img/ornament-corner.png" alt="ornamento" class="absolute top-0 right-0 w-32 opacity-70 rotate-90">
-                  <img src="/img/ornament-corner.png" alt="ornamento" class="absolute bottom-0 left-0 w-32 opacity-70 -rotate-90">
-                  <img src="/img/ornament-corner.png" alt="ornamento" class="absolute bottom-0 right-0 w-32 opacity-70 rotate-180">
-              
-                  <!-- PSICOMANCIA -->
-                  <h4 class="text-2xl text-silver-300 font-bold mt-4 mb-2 tracking-wide underline underline-offset-4 decoration-silver-300">PSICOMANCIA</h4>
-                  <ul class="space-y-3 text-gray-200 leading-relaxed">
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">HIPNOTAE:</strong><span
-                        class="font-medium text-gray-200"> Doblega la voluntad, controla el comportamiento.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">ILUSIONAL:</strong><span
-                        class="font-medium text-gray-200"> Poder de la ilusión, alteración mental de la realidad de otras
-                        personas.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">VÍSYA:</strong><span
-                        class="font-medium text-gray-200"> Visión remota, el poder de ver en el corto tiempo y espacio.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">OMNILINGÜISMO:</strong><span
-                        class="font-medium text-gray-200"> Capacidad de entender y hablar cualquier idioma sin haberlo aprendido
-                        previamente.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">GEOTAE:</strong><span
-                        class="font-medium text-gray-200"> Poder de geolocalización de personas y objetos; permite crear mapas sin
-                        haber visitado antes el lugar.</span></li>
-                  </ul>
-              
-                  <!-- NATURAIS -->
-                  <h4 class="text-2xl text-silver-300 font-bold mt-8 mb-2 tracking-wide underline underline-offset-4 decoration-silver-300">NATURAIS</h4>
-                  <ul class="space-y-3 text-gray-200 leading-relaxed">
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">AEROKINESIS:</strong><span
-                        class="font-medium text-gray-200"> Manipula el aire.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">CLIMATHYS:</strong><span
-                        class="font-medium text-gray-200"> Cambiar y controlar las condiciones climáticas.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">ELEMENTYS:</strong><span
-                        class="font-medium text-gray-200"> Controlar los elementos naturales como el agua, tierra, fuego y
-                        aire.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">FOTOKINESIS:</strong><span
-                        class="font-medium text-gray-200"> Controlar y generar luz.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">PIROQUINESIS:</strong><span
-                        class="font-medium text-gray-200"> Controlar y generar fuego con la mente.</span></li>
-                  </ul>
-              
-                  <!-- CORPOMANCIA -->
-                  <h4 class="text-2xl text-silver-300 font-bold mt-8 mb-2 tracking-wide underline underline-offset-4 decoration-silver-300">CORPOMANCIA</h4>
-                  <ul class="space-y-3 text-gray-200 leading-relaxed">
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">FORZALAI:</strong><span
-                        class="font-medium text-gray-200"> Fuerza sobrehumana o super fuerza.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">METAMORTE:</strong><span
-                        class="font-medium text-gray-200"> Cambiar de forma a voluntad propia o cambiar la forma de los
-                        objetos.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">SPEEDIA:</strong><span
-                        class="font-medium text-gray-200"> Super velocidad.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">MOVITAE:</strong><span
-                        class="font-medium text-gray-200"> Control de objetos y personas a distancia.</span></li>
-                  </ul>
-              
-                  <!-- VITALIS -->
-                  <h4 class="text-2xl text-silver-300 font-bold mt-8 mb-2 tracking-wide underline underline-offset-4 decoration-silver-300">VITALIS</h4>
-                  <ul class="space-y-3 text-gray-200 leading-relaxed">
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">GRAVITAE:</strong><span
-                        class="font-medium text-gray-200"> Manipula la gravedad.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">HELIAIS:</strong><span
-                        class="font-medium text-gray-200"> Poder de curación.</span></li>
-                    <li class="uppercase"><strong class="text-silver-300 tracking-wide">PROTESYA:</strong><span
-                        class="font-medium text-gray-200"> Levanta protecciones.</span></li>
-                  </ul>
-              
-                </div>
-              </div>
-    
-              <!-- Mapa -->
-              <div class="mt-16">
-                <h3 class="text-3xl font-bold text-silver-300 ornament mb-6">MAPA DE TERRAMYST</h3>
-                <img src="/img/Mapa_Terrames.png" alt="Mapa de los Terramaes" class="mx-auto rounded-lg shadow-[0_0_25px_silver]">
-              </div>
+        <div class="grid grid-cols-1 gap-10 md:gap-6">
+
+          <!-- MORVAK -->
+          <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+            <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
+            <div>
+              <h3 class="text-2xl text-silver-200 font-bold">MORVAK</h3>
+              <p class="text-gray-300 italic">(Oso)</p>
+              <img src="/img/foliage.png" alt="" class="mx-auto -mb-4 mt-0 w-20 opacity-99" aria-hidden="true">
             </div>
-    </section>
+            <img src="/img/Oso.png" alt="Oso" class="w-14 md:w-20">
+          </div>
+
+          <!-- IGNIR -->
+          <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+            <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
+            <div>
+              <h3 class="text-2xl text-silver-200 font-bold">IGNIR</h3>
+              <p class="text-gray-300 italic">(León)</p>
+              <img src="/img/foliage.png" alt="" class="mx-auto -mb-4 mt-0 w-20 opacity-99" aria-hidden="true">
+            </div>
+            <img src="/img/Leon.png" alt="León" class="w-14 md:w-20">
+          </div>
+
+          <!-- SYLPHAR -->
+          <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+            <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
+            <div>
+              <h3 class="text-2xl text-silver-200 font-bold">SYLPHAR</h3>
+              <p class="text-gray-300 italic">(Águila)</p>
+              <img src="/img/foliage.png" alt="" class="mx-auto -mb-4 mt-0 w-20 opacity-99" aria-hidden="true">
+            </div>
+            <img src="/img/Aguila.png" alt="Águila" class="w-14 md:w-20">
+          </div>
+
+          <!-- FEROX -->
+          <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+            <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
+            <div>
+              <h3 class="text-2xl text-silver-200 font-bold">FEROX</h3>
+              <p class="text-gray-300 italic">(Lobo)</p>
+              <img src="/img/foliage.png" alt="" class="mx-auto -mb-4 mt-0 w-20 opacity-99" aria-hidden="true">
+            </div>
+            <img src="/img/Lobo.png" alt="Lobo" class="w-14 md:w-20">
+          </div>
+
+          <!-- NYMARA -->
+          <div class="flex items-center justify-evenly bg-green-950 p-3 rounded-lg border border-silver-400/20">
+            <img src="/img/Dragon.png" alt="Dragón" class="w-[90px] h-[90px]">
+            <div>
+              <h3 class="text-2xl text-silver-200 font-bold">NYMARA</h3>
+              <p class="text-gray-300 italic">(Pantera)</p>
+              <img src="/img/foliage.png" alt="" class="mx-auto -mb-4 mt-0 w-20 opacity-99" aria-hidden="true">
+            </div>
+            <img src="/img/Pantera.png" alt="Pantera" class="w-14 md:w-20">
+          </div>
+
+          <!-- Poderes -->
+          <div class="mt-16">
+            <h3 class="text-3xl font-bold text-silver-300 ornament mb-8">PODERES</h3>
+
+            <div
+              class="relative bg-green-950/90 border border-silver-400/40 rounded-lg shadow-[0_0_25px_rgba(192,192,192,0.3)] p-8 max-w-3xl mx-auto text-center overflow-hidden">
+
+              <!-- Ornamentos en las esquinas -->
+              <img src="/img/ornament-corner.png" alt="" class="absolute top-0 left-0 w-32 opacity-70"
+                aria-hidden="true">
+              <img src="/img/ornament-corner.png" alt="" class="absolute top-0 right-0 w-32 opacity-70 rotate-90"
+                aria-hidden="true">
+              <img src="/img/ornament-corner.png" alt="" class="absolute bottom-0 left-0 w-32 opacity-70 -rotate-90"
+                aria-hidden="true">
+              <img src="/img/ornament-corner.png" alt="" class="absolute bottom-0 right-0 w-32 opacity-70 rotate-180"
+                aria-hidden="true">
+
+              <!-- PSICOMANCIA -->
+              <h4
+                class="text-2xl text-silver-300 font-bold mt-4 mb-2 tracking-wide underline underline-offset-4 decoration-silver-300">
+                PSICOMANCIA</h4>
+              <ul class="space-y-3 text-gray-200 leading-relaxed">
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">HIPNOTAE:</strong><span
+                    class="font-medium text-gray-200"> Doblega la voluntad, controla el comportamiento.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">ILUSIONAL:</strong><span
+                    class="font-medium text-gray-200"> Poder de la ilusión, alteración mental de la realidad de otras
+                    personas.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">VÍSYA:</strong><span
+                    class="font-medium text-gray-200"> Visión remota, el poder de ver en el corto tiempo y
+                    espacio.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">OMNILINGÜISMO:</strong><span
+                    class="font-medium text-gray-200"> Capacidad de entender y hablar cualquier idioma sin haberlo
+                    aprendido
+                    previamente.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">GEOTAE:</strong><span
+                    class="font-medium text-gray-200"> Poder de geolocalización de personas y objetos; permite crear
+                    mapas sin
+                    haber visitado antes el lugar.</span></li>
+              </ul>
+
+              <!-- NATURAIS -->
+              <h4
+                class="text-2xl text-silver-300 font-bold mt-8 mb-2 tracking-wide underline underline-offset-4 decoration-silver-300">
+                NATURAIS</h4>
+              <ul class="space-y-3 text-gray-200 leading-relaxed">
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">AEROKINESIS:</strong><span
+                    class="font-medium text-gray-200"> Manipula el aire.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">CLIMATHYS:</strong><span
+                    class="font-medium text-gray-200"> Cambiar y controlar las condiciones climáticas.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">ELEMENTYS:</strong><span
+                    class="font-medium text-gray-200"> Controlar los elementos naturales como el agua, tierra, fuego y
+                    aire.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">FOTOKINESIS:</strong><span
+                    class="font-medium text-gray-200"> Controlar y generar luz.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">PIROQUINESIS:</strong><span
+                    class="font-medium text-gray-200"> Controlar y generar fuego con la mente.</span></li>
+              </ul>
+
+              <!-- CORPOMANCIA -->
+              <h4
+                class="text-2xl text-silver-300 font-bold mt-8 mb-2 tracking-wide underline underline-offset-4 decoration-silver-300">
+                CORPOMANCIA</h4>
+              <ul class="space-y-3 text-gray-200 leading-relaxed">
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">FORZALAI:</strong><span
+                    class="font-medium text-gray-200"> Fuerza sobrehumana o super fuerza.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">METAMORTE:</strong><span
+                    class="font-medium text-gray-200"> Cambiar de forma a voluntad propia o cambiar la forma de los
+                    objetos.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">SPEEDIA:</strong><span
+                    class="font-medium text-gray-200"> Super velocidad.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">MOVITAE:</strong><span
+                    class="font-medium text-gray-200"> Control de objetos y personas a distancia.</span></li>
+              </ul>
+
+              <!-- VITALIS -->
+              <h4
+                class="text-2xl text-silver-300 font-bold mt-8 mb-2 tracking-wide underline underline-offset-4 decoration-silver-300">
+                VITALIS</h4>
+              <ul class="space-y-3 text-gray-200 leading-relaxed">
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">GRAVITAE:</strong><span
+                    class="font-medium text-gray-200"> Manipula la gravedad.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">HELIAIS:</strong><span
+                    class="font-medium text-gray-200"> Poder de curación.</span></li>
+                <li class="uppercase"><strong class="text-silver-300 tracking-wide">PROTESYA:</strong><span
+                    class="font-medium text-gray-200"> Levanta protecciones.</span></li>
+              </ul>
+
+            </div>
+          </div>
+
+          <!-- Mapa -->
+          <div class="mt-16">
+            <h3 class="text-3xl font-bold text-silver-300 ornament mb-6">MAPA DE TERRAMYST</h3>
+            <img src="/img/Mapa_Terrames(1).png" alt="Mapa de los Terramaes"
+              class="mx-auto rounded-lg shadow-[0_0_25px_silver]">
+          </div>
+        </div>
+  </section>
 
   <!-- Pre-order CTA -->
   <script>
@@ -505,7 +556,7 @@
           class="px-4 py-3 rounded-lg w-full md:w-2/3 text-gray-900" />
         <button type="submit" class="btn-medallion">Avísame</button>
       </form>
-      
+
       <p id="formMessage" class="mt-4 text-gray-200 text-lg"></p>
     </div>
   </section>
